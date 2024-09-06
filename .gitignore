@@ -1,0 +1,8 @@
+.vscode/
+venv/
+__pycache__/
+notebooks/.ipynb_checkpoints/
+notebooks/Untitled.ipynb
+src/data_preprocessing.py
+src/outlier_handling.py
+src/transformations.py
