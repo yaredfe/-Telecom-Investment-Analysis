@@ -43,8 +43,8 @@ def aggregate_user_data(df):
         'Email UL (Bytes)': 'total_email_ul',
         'Gaming DL (Bytes)': 'total_gaming_dl',
         'Gaming UL (Bytes)': 'total_gaming_ul',
-        'Other DL (Bytes) ': 'total_other_dl',
-        'Other UL (Bytes) ': 'total_other_ul',
+        'Other DL (Bytes)': 'total_other_dl',
+        'Other UL (Bytes)': 'total_other_ul',
         'Total DL (Bytes)': 'total_dl',
         'Total UL (Bytes)': 'total_ul',
     })

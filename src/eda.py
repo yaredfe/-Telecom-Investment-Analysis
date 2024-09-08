@@ -32,7 +32,7 @@ def compute_dispersion_parameters(df):
     """
     Computes dispersion parameters like variance and standard deviation.
     """
-    return df[['Dur. (ms)', 'Total DL (Bytes)', 'Total UL (Bytes)']].agg(['mean', 'std', 'var'])
+    return df[['total_duration', 'total_dl', 'total_ul']].agg(['mean', 'std', 'var'])
 
 def plot_univariate_analysis(df):
     """
@@ -57,14 +57,14 @@ def compute_correlation_matrix(df):
     """
     Computes and returns the correlation matrix for selected variables.
     """
-    return df[['Social_Media_data', 'Google_data', 'Email_data', 'YouTube_data', 'Netflix_data', 'Gaming_data', 'Other_data']].corr()
+    return df[['total_social_media_dl', 'total_google_dl', 'total_email_dl', 'total_youtube_dl', 'total_netflix_dl', 'total_gaming_dl', 'total_other_dl']].corr()
 
 def perform_pca(df):
     """
     Performs Principal Component Analysis (PCA) and returns the PCA result and explained variance.
     """
     pca = PCA(n_components=2)  # Reducing to 2 components for visualization
-    data_for_pca = df[['Social_Media_data', 'Google_data', 'Email_data', 'YouTube_data', 'Netflix_data', 'Gaming_data', 'Other_data']]
+    data_for_pca = df[['total_social_media_dl', 'total_google_dl', 'total_email_dl', 'total_youtube_dl', 'total_netflix_dl', 'total_gaming_dl', 'total_other_dl']]
     pca_result = pca.fit_transform(data_for_pca)
 
     # Create a DataFrame for PCA results
